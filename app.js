@@ -3,7 +3,7 @@ function Header() {
         <header>
             <div className="container">
                 <h1>ESIM YOPOUGON</h1>
-                <p>Grande École de Formation Professionnelle</p>
+                <p>Ecole Supérieure d'Industrie et de Management</p>
             </div>
         </header>
     );
@@ -46,7 +46,7 @@ function About() {
         <section id="about" className="section">
             <div className="container">
                 <h2>À propos de l'ESIM YOPOUGON</h2>
-                <p>L'ESIM YOPOUGON est une grande école de formation professionnelle renommée, située à Yopougon, en Côte d'Ivoire. Notre institution se distingue par son engagement envers l'excellence académique et son dévouement à la réussite de ses étudiants.</p>
+                <p>ESIM YOPOUGON est une grande école de formation Supérieure renommée, située à Yopougon, en Côte d'Ivoire. Notre institution se distingue par son engagement envers l'excellence académique et son dévouement à la réussite de ses étudiants.</p>
                 <p>Notre mission est de former des professionnels compétents et polyvalents, prêts à relever les défis du monde professionnel moderne.</p>
                 <div className="image-placeholder">Image de l'école (à remplacer)</div>
             </div>
@@ -92,7 +92,7 @@ function CadreVie() {
         <section id="cadre-vie" className="section">
             <div className="container">
                 <h2>Cadre de vie et d'étude</h2>
-                <p>À l'ESIM YOPOUGON, nous croyons fermement que l'environnement d'apprentissage joue un rôle crucial dans la réussite de nos étudiants.</p>
+                <p>À ESIM YOPOUGON, nous croyons fermement que l'environnement d'apprentissage joue un rôle crucial dans la réussite de nos étudiants.</p>
                 <ul>
                     <li>Salles de classe modernes et bien équipées</li>
                     <li>Laboratoires informatiques à la pointe de la technologie</li>
