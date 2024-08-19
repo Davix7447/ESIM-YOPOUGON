@@ -3,7 +3,7 @@ function Header() {
         <header>
             <div className="container">
                 <h1>ESIM YOPOUGON</h1>
-                <p>Ecole Supérieure d'Industrie et de Management</p>
+                <p>Grande École de Formation Professionnelle</p>
             </div>
         </header>
     );
@@ -46,7 +46,7 @@ function About() {
         <section id="about" className="section">
             <div className="container">
                 <h2>À propos de l'ESIM YOPOUGON</h2>
-                <p>ESIM YOPOUGON est une grande école de formation Supérieure renommée, située à Yopougon, en Côte d'Ivoire. Notre institution se distingue par son engagement envers l'excellence académique et son dévouement à la réussite de ses étudiants.</p>
+                <p>L'ESIM YOPOUGON est une grande école de formation professionnelle renommée, située à Yopougon, en Côte d'Ivoire. Notre institution se distingue par son engagement envers l'excellence académique et son dévouement à la réussite de ses étudiants.</p>
                 <p>Notre mission est de former des professionnels compétents et polyvalents, prêts à relever les défis du monde professionnel moderne.</p>
                 <div className="image-placeholder">Image de l'école (à remplacer)</div>
             </div>
@@ -92,7 +92,7 @@ function CadreVie() {
         <section id="cadre-vie" className="section">
             <div className="container">
                 <h2>Cadre de vie et d'étude</h2>
-                <p>À ESIM YOPOUGON, nous croyons fermement que l'environnement d'apprentissage joue un rôle crucial dans la réussite de nos étudiants.</p>
+                <p>À l'ESIM YOPOUGON, nous croyons fermement que l'environnement d'apprentissage joue un rôle crucial dans la réussite de nos étudiants.</p>
                 <ul>
                     <li>Salles de classe modernes et bien équipées</li>
                     <li>Laboratoires informatiques à la pointe de la technologie</li>
@@ -130,20 +130,89 @@ function Modal({ isOpen, onClose, content }) {
 }
 
 function ContactForm() {
+    const [formData, setFormData] = React.useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+    const [submitStatus, setSubmitStatus] = React.useState(null);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setSubmitStatus('sending');
+
+        try {
+            const response = await fetch('https://formspree.io/f/mwpenbja', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                setSubmitStatus('success');
+                setFormData({ name: '', email: '', message: '' });
+            } else {
+                throw new Error('Erreur lors de l'envoi du formulaire');
+            }
+        } catch (error) {
+            console.error('Erreur:', error);
+            setSubmitStatus('error');
+        }
+    };
+
     return (
         <div>
             <h2>Contactez-nous</h2>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Nom :</label>
-                <input type="text" id="name" name="name" required />
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    value={formData.name}
+                    onChange={handleChange}
+                    required 
+                />
 
                 <label htmlFor="email">Email :</label>
-                <input type="email" id="email" name="email" required />
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    value={formData.email}
+                    onChange={handleChange}
+                    required 
+                />
 
                 <label htmlFor="message">Message :</label>
-                <textarea id="message" name="message" required></textarea>
+                <textarea 
+                    id="message" 
+                    name="message" 
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                ></textarea>
 
-                <button type="submit">Envoyer</button>
+                <button type="submit" disabled={submitStatus === 'sending'}>
+                    {submitStatus === 'sending' ? 'Envoi en cours...' : 'Envoyer'}
+                </button>
+
+                {submitStatus === 'success' && (
+                    <p className="success-message">Votre message a été envoyé avec succès !</p>
+                )}
+                {submitStatus === 'error' && (
+                    <p className="error-message">Une erreur s'est produite. Veuillez réessayer.</p>
+                )}
             </form>
         </div>
     );
