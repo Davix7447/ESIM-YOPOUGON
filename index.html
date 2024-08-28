@@ -3,14 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ESIM YOPOUGON</title>
+    <title>ESIM YOPOUGON - Excellence académique en Côte d'Ivoire</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="root"></div>
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <script type="text/babel" src="app.js"></script>
+    <header class="fixed top-0 w-full bg-white shadow-md z-50 transition-all duration-300 floating-menu">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-blue-700">ESIM YOPOUGON</a>
+            <div class="hidden md:flex space-x-4">
+                <a href="#about" class="hover:text-blue-700 transition duration-300">À propos</a>
+                <a href="#filieres" class="hover:text-blue-700 transition duration-300">Filières</a>
+                <a href="#cadre-de-vie" class="hover:text-blue-700 transition duration-300">Cadre de vie</a>
+                <a href="#contact" class="hover:text-blue-700 transition duration-300">Contact</a>
+            </div>
+            <button class="md:hidden">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="mt-16">
+        <section id="hero" class="bg-blue-700 text-white py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-5xl font-bold mb-4 animate__animated animate__fadeInDown">Bienvenue à ESIM YOPOUGON</h1>
+                <p class="text-xl mb-8 animate__animated animate__fadeIn">L'excellence académique au cœur de la Côte d'Ivoire</p>
+                <a href="#contact" class="bg-white text-blue-700 px-8 py-3 rounded-full font-bold hover:bg-blue-100 transition duration-300 animate__animated animate__bounceIn">Nous contacter</a>
+            </div>
+        </section>
+
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-8 text-center animate__animated animate__fadeIn">À propos de nous</h2>
+                <div class="flex flex-wrap -mx-3">
+                    <div class="w-full md:w-1/2 px-3 mb-6 animate__animated animate__fadeInLeft">
+                        <h3 class="text-2xl font-semibold mb-4">Notre Histoire</h3>
+                        <p>Fondée en 2000, l'ESIM YOPOUGON s'est rapidement imposée comme un pilier de l'excellence académique en Côte d'Ivoire. Notre engagement envers l'innovation et la qualité de l'enseignement nous a permis de former des milliers de professionnels compétents et visionnaires.</p>
+                    </div>
+                    <div class="w-full md:w-1/2 px-3 mb-6 animate__animated animate__fadeInRight">
+                        <h3 class="text-2xl font-semibold mb-4">Notre Mission</h3>
+                        <p>À l'ESIM YOPOUGON, nous nous engageons à façonner les leaders de demain. Notre approche pédagogique innovante, combinée à des installations de pointe et un corps professoral d'élite, garantit à nos étudiants une formation de classe mondiale, adaptée aux défis du 21e siècle.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="filieres" class="bg-gray-200 py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-8 text-center animate__animated animate__fadeIn">Nos filières BTS</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 animate__animated animate__zoomIn filiere-card">
+                        <i class="fas fa-hotel text-4xl text-blue-700 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Tourisme et Hôtellerie (TH)</h3>
+                        <p>Formez-vous aux métiers de l'accueil et du tourisme.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 animate__animated animate__zoomIn filiere-card">
+                        <i class="fas fa-chart-line text-4xl text-blue-700 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Finance Comptabilité et Gestion d'Entreprise (FCGE)</h3>
+                        <p>Maîtrisez les outils financiers et comptables modernes.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 animate__animated animate__zoomIn filiere-card">
+                        <i class="fas fa-shopping-cart text-4xl text-blue-700 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Gestion Commerciale (GEC)</h3>
+                        <p>Développez vos compétences en marketing et vente.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 animate__animated animate__zoomIn filiere-card">
+                        <i class="fas fa-users text-4xl text-blue-700 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Ressources Humaines et Communication (RHC)</h3>
+                        <p>Gérez le capital humain et la communication d'entreprise.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 animate__animated animate__zoomIn filiere-card">
+                        <i class="fas fa-desktop text-4xl text-blue-700 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Assistanat de Direction (AD)</h3>
+                        <p>Devenez un pilier essentiel de l'organisation d'entreprise.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 animate__animated animate__zoomIn filiere-card">
+                        <i class="fas fa-truck text-4xl text-blue-700 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Logistique (LOG)</h3>
+                        <p>Optimisez la chaîne d'approvisionnement et de distribution.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 animate__animated animate__zoomIn filiere-card">
+                        <i class="fas fa-laptop-code text-4xl text-blue-700 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Informatique Développeur d'Application (IDA)</h3>
+                        <p>Créez les applications qui façonneront le futur numérique.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 animate__animated animate__zoomIn filiere-card">
+                        <i class="fas fa-building text-4xl text-blue-700 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Génie Civil Option Bâtiment (GBAT)</h3>
+                        <p>Concevez et réalisez les infrastructures de demain.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 animate__animated animate__zoomIn filiere-card">
+                        <i class="fas fa-microchip text-4xl text-blue-700 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Système Électronique et Informatique (SEI)</h3>
+                        <p>Maîtrisez les systèmes électroniques et informatiques modernes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cadre-de-vie" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-8 text-center animate__animated animate__fadeIn">Cadre de vie</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="animate__animated animate__fadeInLeft">
+                        <img src="/api/placeholder/600/400" alt="Campus ESIM YOPOUGON" class="rounded-lg shadow-md mb-4">
+                        <h3 class="text-2xl font-semibold mb-2">Un campus moderne et accueillant</h3>
+                        <p>Notre campus offre un environnement d'apprentissage stimulant, avec des salles de classe équipées des dernières technologies, des laboratoires de pointe et des espaces de détente pour favoriser les échanges entre étudiants.</p>
+                    </div>
+                    <div class="animate__animated animate__fadeInRight">
+                        <img src="/api/placeholder/600/400" alt="Bibliothèque ESIM YOPOUGON" class="rounded-lg shadow-md mb-4">
+                        <h3 class="text-2xl font-semibold mb-2">Des ressources pour réussir</h3>
+                        <p>Notre bibliothèque bien fournie, nos salles informatiques et nos espaces de travail collaboratif sont conçus pour soutenir la réussite de nos étudiants. Nous offrons également un accès à des ressources en ligne de qualité pour un apprentissage flexible.</p>
+                    </div>
+                </div>
+                <div class="mt-8 text-center animate__animated animate__fadeIn">
+                    <p class="text-lg">À l'ESIM YOPOUGON, nous croyons qu'un environnement d'apprentissage de qualité est essentiel à la réussite académique. Notre campus est conçu pour inspirer, motiver et soutenir nos étudiants dans leur parcours vers l'excellence.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-gray-200 py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-8 text-center animate__animated animate__fadeIn">Contactez-nous</h2>
+                <div class="flex flex-wrap -mx-3">
+                    <div class="w-full md:w-1/2 px-3 mb-6">
+                        <form id="contact-form" class="animate__animated animate__fadeInLeft">
+                            <div class="mb-4">
+                                <label for="nom" class="block mb-2">Nom</label>
+                                <input type="text" id="nom" name="nom" required class="w-full p-2 border rounded">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block mb-2">Email</label>
+                                <input type="email" id="email" name="email" required class="w-full p-2 border rounded">
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block mb-2">Message</label>
+                                <textarea id="message" name="message" required class="w-full p-2 border rounded h-32"></textarea>
+                            </div>
+                            <button type="submit" class="bg-blue-700 text-white px-6 py-2 rounded hover:bg-blue-600 transition duration-300">Envoyer</button>
+                        </form>
+                    </div>
+                    <div class="w-full md:w-1/2 px-3">
+                        <div class="bg-white rounded-lg shadow-md p-6 h-full animate__animated animate__fadeInRight">
+                            <h3 class="text-xl font-semibold mb-4">Nous trouver</h3>
+                            <p class="mb-4">Yopougon quartier Maroc, à 300 m du carrefour Anador Abidjan, Côte d'Ivoire</p>
+                            <div id="map" class="h-64 rounded-lg mb-4"></div>
+                            <div class="flex justify-center space-x-4">
+                                <a href="#" class="text-blue-700 hover:text-blue-900"><i class="fab fa-facebook-square text-3xl"></i></a>
+                                <a href="#" class="text-red-600 hover:text-red-800"><i class="fas fa-envelope-square text-3xl"></i></a>
+                                <a href="#" class="text-black hover:text-gray-800"><i class="fab fa-tiktok text-3xl"></i></a>
+                                <a href="#" class="text-pink-600 hover:text-pink-800"><i class="fab fa-instagram-square text-3xl"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-700 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 ESIM YOPOUGON. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="script.js"></script>
 </body>
 </html>
